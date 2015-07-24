@@ -55,6 +55,11 @@ source "$BACKPORT_DIR/net/bluetooth/cmtp/Kconfig"
 
 source "$BACKPORT_DIR/net/bluetooth/hidp/Kconfig"
 
+config BACKPORT_BT_HS
+	bool "Bluetooth High Speed (HS) features"
+	depends on BT_BREDR
+	default y
+
 config BACKPORT_BT_LE
 	bool "Bluetooth Low Energy (LE) features"
 	depends on !BT_LE
